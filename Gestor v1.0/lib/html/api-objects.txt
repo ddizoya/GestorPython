@@ -1,0 +1,14 @@
+BaseDatos	BaseDatos-module.html
+BaseDatos.__package__	BaseDatos-module.html#__package__
+BaseDatos.BaseDatos	BaseDatos.BaseDatos-class.html
+BaseDatos.BaseDatos.estado_licencia	BaseDatos.BaseDatos-class.html#estado_licencia
+BaseDatos.BaseDatos.nuevo_paciente	BaseDatos.BaseDatos-class.html#nuevo_paciente
+BaseDatos.BaseDatos.borrar_paciente	BaseDatos.BaseDatos-class.html#borrar_paciente
+BaseDatos.BaseDatos.verificar_user	BaseDatos.BaseDatos-class.html#verificar_user
+BaseDatos.BaseDatos.borrar_tabla_pacientes	BaseDatos.BaseDatos-class.html#borrar_tabla_pacientes
+BaseDatos.BaseDatos.ver_pacientes	BaseDatos.BaseDatos-class.html#ver_pacientes
+BaseDatos.BaseDatos.crearTablaPaciente	BaseDatos.BaseDatos-class.html#crearTablaPaciente
+BaseDatos.BaseDatos.aceptar_licencia	BaseDatos.BaseDatos-class.html#aceptar_licencia
+BaseDatos.BaseDatos.buscar_paciente	BaseDatos.BaseDatos-class.html#buscar_paciente
+BaseDatos.BaseDatos.modificar_paciente	BaseDatos.BaseDatos-class.html#modificar_paciente
+BaseDatos.BaseDatos.__init__	BaseDatos.BaseDatos-class.html#__init__

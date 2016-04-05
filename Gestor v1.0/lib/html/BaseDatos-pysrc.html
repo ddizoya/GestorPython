@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>BaseDatos</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;BaseDatos
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="BaseDatos-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="BaseDatos-module.html">Module BaseDatos</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sqlite3</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos"></a><div id="BaseDatos-def"><a name="L5"></a><tt class="py-lineno"> 5</tt> <a class="py-toggle" href="#" id="BaseDatos-toggle" onclick="return toggle('BaseDatos');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html">BaseDatos</a><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="BaseDatos-expanded"><a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">    <tt class="py-docstring">"""Este m&#243;dulo se centrar&#225; en las conexiones entre la base de datos y nuestra aplicaci&#243;n, empleando sqlite3."""</tt> </tt>
+<a name="BaseDatos.__init__"></a><div id="BaseDatos.__init__-def"><a name="L7"></a><tt class="py-lineno"> 7</tt> <a class="py-toggle" href="#" id="BaseDatos.__init__-toggle" onclick="return toggle('BaseDatos.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.__init__-expanded"><a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">        <tt class="py-docstring">"""Constructor sin par&#225;metros que inicializa la conexi&#243;n a la base de datos."""</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt> <tt class="py-op">=</tt> <tt class="py-name">sqlite3</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"basedatos.bd"</tt><tt class="py-op">)</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt><tt class="py-op">.</tt><tt class="py-name">cursor</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.borrar_tabla_pacientes"></a><div id="BaseDatos.borrar_tabla_pacientes-def"><a name="L12"></a><tt class="py-lineno">12</tt> <a class="py-toggle" href="#" id="BaseDatos.borrar_tabla_pacientes-toggle" onclick="return toggle('BaseDatos.borrar_tabla_pacientes');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#borrar_tabla_pacientes">borrar_tabla_pacientes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.borrar_tabla_pacientes-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.borrar_tabla_pacientes-expanded"><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo para borrar directamente la tabla pacientes"""</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"DROP TABLE pacientes"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.crearTablaPaciente"></a><div id="BaseDatos.crearTablaPaciente-def"><a name="L16"></a><tt class="py-lineno">16</tt> <a class="py-toggle" href="#" id="BaseDatos.crearTablaPaciente-toggle" onclick="return toggle('BaseDatos.crearTablaPaciente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#crearTablaPaciente">crearTablaPaciente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.crearTablaPaciente-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.crearTablaPaciente-expanded"><a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo que crea la tabla pacientes con unos campos predeterminados."""</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-string">"create table pacientes (id text primary key not null, nombre texto, apellido1 text, apellido2 text, telefono integer, estado text, comentario text)"</tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.nuevo_paciente"></a><div id="BaseDatos.nuevo_paciente-def"><a name="L21"></a><tt class="py-lineno">21</tt> <a class="py-toggle" href="#" id="BaseDatos.nuevo_paciente-toggle" onclick="return toggle('BaseDatos.nuevo_paciente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#nuevo_paciente">nuevo_paciente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">array</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.nuevo_paciente-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.nuevo_paciente-expanded"><a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-docstring">"""Agregar un nuevo paciente. Este m&#233;todo se usa desde el bot&#243;n de agregar de la toolbar de la clase Gestor."""</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"INSERT INTO pacientes VALUES (?, ?, ?, ?, ?, ?, ?)"</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">6</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.borrar_paciente"></a><div id="BaseDatos.borrar_paciente-def"><a name="L27"></a><tt class="py-lineno">27</tt> <a class="py-toggle" href="#" id="BaseDatos.borrar_paciente-toggle" onclick="return toggle('BaseDatos.borrar_paciente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#borrar_paciente">borrar_paciente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">id</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.borrar_paciente-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.borrar_paciente-expanded"><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-docstring">"""Borrar un paciente. Este m&#233;todo se usar&#225; desde el bot&#243;n de borrar de la toolbar de la clase Gestor."""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-name">vid</tt> <tt class="py-op">=</tt> <tt class="py-string">"'"</tt><tt class="py-op">+</tt> <tt class="py-name">id</tt> <tt class="py-op">+</tt> <tt class="py-string">"'"</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"DELETE FROM pacientes WHERE id="</tt> <tt class="py-op">+</tt> <tt class="py-name">vid</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.modificar_paciente"></a><div id="BaseDatos.modificar_paciente-def"><a name="L34"></a><tt class="py-lineno">34</tt> <a class="py-toggle" href="#" id="BaseDatos.modificar_paciente-toggle" onclick="return toggle('BaseDatos.modificar_paciente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#modificar_paciente">modificar_paciente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">id</tt><tt class="py-op">,</tt> <tt class="py-param">array</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.modificar_paciente-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.modificar_paciente-expanded"><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">        <tt class="py-docstring">"""Modificar un paciente seg&#250;n su DNI desde el bot&#243;n de modificar en la toolbar de la clase Gestor."""</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"UPDATE pacientes SET nombre=(?), apellido1=(?), apellido2=(?), telefono=(?), estado=(?), comentario=(?) where id=(?)"</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">id</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.buscar_paciente"></a><div id="BaseDatos.buscar_paciente-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="BaseDatos.buscar_paciente-toggle" onclick="return toggle('BaseDatos.buscar_paciente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#buscar_paciente">buscar_paciente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">id</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.buscar_paciente-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.buscar_paciente-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">        <tt class="py-docstring">"""Buscar un s&#243;lo paciente seg&#250;n su DNI. Este m&#233;todo se usar&#225; desde el bot&#243;n de modificar de la toolbar de la clase Gestor."""</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-name">vid</tt> <tt class="py-op">=</tt> <tt class="py-string">"'"</tt><tt class="py-op">+</tt> <tt class="py-name">id</tt> <tt class="py-op">+</tt> <tt class="py-string">"'"</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"SELECT * FROM pacientes WHERE id ="</tt> <tt class="py-op">+</tt> <tt class="py-name">vid</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.ver_pacientes"></a><div id="BaseDatos.ver_pacientes-def"><a name="L48"></a><tt class="py-lineno">48</tt> <a class="py-toggle" href="#" id="BaseDatos.ver_pacientes-toggle" onclick="return toggle('BaseDatos.ver_pacientes');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#ver_pacientes">ver_pacientes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.ver_pacientes-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.ver_pacientes-expanded"><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">        <tt class="py-docstring">"""Ver todos los pacientes que tenemos en la tabla. Es el m&#233;todo que vuelca los datos al treeview de nuestra clase Gestor</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt class="py-docstring">        y con el que generamos la tabla con el objeto canvas (reportlab) en la clase Historial."""</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"SELECT * FROM pacientes"</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.aceptar_licencia"></a><div id="BaseDatos.aceptar_licencia-def"><a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="BaseDatos.aceptar_licencia-toggle" onclick="return toggle('BaseDatos.aceptar_licencia');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#aceptar_licencia">aceptar_licencia</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">user</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.aceptar_licencia-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.aceptar_licencia-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo para aceptar por primera vez la licencia de uso. Se usa en el bot&#243;n de Licencia.py."""</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-name">user</tt> <tt class="py-op">=</tt> <tt class="py-string">"'"</tt> <tt class="py-op">+</tt> <tt class="py-name">user</tt> <tt class="py-op">+</tt> <tt class="py-string">"'"</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"UPDATE license SET license = 1 WHERE user ="</tt> <tt class="py-op">+</tt> <tt class="py-name">user</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">conec</tt><tt class="py-op">.</tt><tt class="py-name">commit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.estado_licencia"></a><div id="BaseDatos.estado_licencia-def"><a name="L62"></a><tt class="py-lineno">62</tt> <a class="py-toggle" href="#" id="BaseDatos.estado_licencia-toggle" onclick="return toggle('BaseDatos.estado_licencia');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#estado_licencia">estado_licencia</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">user</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.estado_licencia-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.estado_licencia-expanded"><a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">        <tt class="py-docstring">"""Verifica, en la clase Log.py, si el user ha aceptado previamente las cl&#225;usulas de licencia."""</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">        <tt class="py-name">user</tt> <tt class="py-op">=</tt> <tt class="py-string">"'"</tt> <tt class="py-op">+</tt> <tt class="py-name">user</tt> <tt class="py-op">+</tt> <tt class="py-string">"'"</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"SELECT license FROM license WHERE user="</tt> <tt class="py-op">+</tt> <tt class="py-name">user</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">ele</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-number">0</tt> <tt class="py-keyword">in</tt> <tt class="py-name">ele</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"> </tt>
+<a name="BaseDatos.verificar_user"></a><div id="BaseDatos.verificar_user-def"><a name="L73"></a><tt class="py-lineno">73</tt> <a class="py-toggle" href="#" id="BaseDatos.verificar_user-toggle" onclick="return toggle('BaseDatos.verificar_user');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt>  <a class="py-def-name" href="BaseDatos.BaseDatos-class.html#verificar_user">verificar_user</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">user</tt><tt class="py-op">,</tt> <tt class="py-param">passwd</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BaseDatos.verificar_user-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="BaseDatos.verificar_user-expanded"><a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">        <tt class="py-docstring">"""Verifica si el user es un usuario registrado en la base de datos."""</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-name">user</tt> <tt class="py-op">=</tt> <tt class="py-string">"'"</tt> <tt class="py-op">+</tt> <tt class="py-name">user</tt> <tt class="py-op">+</tt> <tt class="py-string">"'"</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-name">passwd</tt> <tt class="py-op">=</tt> <tt class="py-string">"'"</tt> <tt class="py-op">+</tt> <tt class="py-name">passwd</tt> <tt class="py-op">+</tt> <tt class="py-string">"'"</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">        <tt class="py-name">consulta</tt> <tt class="py-op">=</tt> <tt class="py-string">"SELECT COUNT(*) FROM user WHERE user ="</tt> <tt class="py-op">+</tt><tt class="py-name">user</tt> <tt class="py-op">+</tt> <tt class="py-string">"AND passwd="</tt> <tt class="py-op">+</tt> <tt class="py-name">passwd</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt class="py-name">execute</tt><tt class="py-op">(</tt><tt class="py-name">consulta</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">ele</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-number">0</tt> <tt class="py-keyword">in</tt> <tt class="py-name">ele</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div></div><a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Apr  5 07:42:51 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

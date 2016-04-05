@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.16.1 -->
+<interface>
+  <requires lib="gtk+" version="3.10"/>
+  <object class="GtkGrid" id="grid1">
+    <property name="width_request">726</property>
+    <property name="height_request">290</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="opacity">0.92156862745098034</property>
+    <property name="margin_left">62</property>
+    <property name="margin_right">61</property>
+    <property name="margin_top">36</property>
+    <property name="margin_bottom">40</property>
+    <property name="resize_mode">immediate</property>
+    <property name="row_homogeneous">True</property>
+    <property name="column_homogeneous">True</property>
+    <child>
+      <object class="GtkLabel" id="datos">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Datos</property>
+        <property name="ellipsize">end</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">2</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="nombre">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.98039215686274506</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Nombre</property>
+        <property name="ellipsize">end</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">3</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="apellido1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Primer apellido</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">4</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="direcc">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Direccion</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">6</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="telf">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Telélfono</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">7</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="estado">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Estado</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">8</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="coment">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Comentarios</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">9</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">3</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">4</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="4">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">6</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="5">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">7</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="label15">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">8</property>
+        <property name="width">2</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="label16">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">9</property>
+        <property name="width">2</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkImage" id="image1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="xalign">0.49000000953674316</property>
+        <property name="resource">../images/default-picture.png</property>
+      </object>
+      <packing>
+        <property name="left_attach">3</property>
+        <property name="top_attach">0</property>
+        <property name="width">2</property>
+        <property name="height">5</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="apellido2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">Segundo apellido</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="top_attach">5</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel" id="3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="opacity">0.9882352941176471</property>
+        <property name="halign">start</property>
+        <property name="width_chars">3</property>
+        <property name="angle">0.01</property>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="top_attach">5</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkFileChooserButton" id="filechooserbutton1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="resize_mode">immediate</property>
+        <property name="filter">filterimg</property>
+        <property name="title" translatable="yes">Cambiar</property>
+      </object>
+      <packing>
+        <property name="left_attach">3</property>
+        <property name="top_attach">5</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkButton" id="button1">
+        <property name="label" translatable="yes">Guardar</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+        <property name="relief">none</property>
+        <property name="yalign">0.52999997138977051</property>
+        <property name="always_show_image">True</property>
+      </object>
+      <packing>
+        <property name="left_attach">4</property>
+        <property name="top_attach">5</property>
+        <property name="width">1</property>
+        <property name="height">1</property>
+      </packing>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+  </object>
+</interface>
